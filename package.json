@@ -1,0 +1,37 @@
+{
+  "name": "@hackclub/icons",
+  "version": "0.0.1",
+  "description": "Hack Club’s iconset, a superset of spectrum-icons",
+  "main": "dist/index.js",
+  "keywords": [
+    "icon",
+    "react"
+  ],
+  "author": "Lachlan Campbell",
+  "scripts": {
+    "docs": "x0 build docs/index.js -s --out-dir docs",
+    "dev": "x0 dev docs/index.js -op 8080",
+    "prepare": "babel index.js --out-dir dist"
+  },
+  "dependencies": {
+    "react": "^16.4.2"
+  },
+  "devDependencies": {
+    "@compositor/x0": "^6.0.5",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "prop-types": "^15.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackclub/icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hackclub/icons/issues"
+  },
+  "x0": {
+    "title": "@hackclub/icons"
+  }
+}

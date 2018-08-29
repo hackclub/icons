@@ -1,0 +1,24 @@
+# `@hackclub/icons`
+
+Hack Club’s icons are a superset of [Spectrum](https://spectrum.chat)’s incredible collection (also published as [`spectrum-icons`](https://github.com/lachlanjc/spectrum-icons)). Designed for use with our [Design System](https://github.com/hackclub/design-system)
+
+[See them all](https://hackclub-icons.now.sh)
+
+## Usage
+
+```sh
+npm i @hackclub/icons
+```
+
+```js
+import React from 'react'
+import Icon from '@hackclub/icons'
+
+export default () => (
+  <div style={{ color: 'hotpink' }}>
+    <Icon glyph="challenge" size={128} />
+    <Icon glyph="event-code" size={64} />
+    <Icon glyph="important" size={32} />
+  </div>
+)
+```
