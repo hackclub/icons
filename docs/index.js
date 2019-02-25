@@ -15,13 +15,18 @@ export default () => (
       margin: auto;
     }
     h1 {
-      font-size: 24px;
-      font-weight: bold;
+      color: #666;
+      font-size: 32px;
+      font-weight: 800;
+    }
+    h1 span {
+      color: #e42d42;
     }
     nav a {
+      color: #444;
       font-size: 16px;
+      font-weight: 600;
       margin: 0 16px;
-      color: #333;
     }
     nav a:hover {
       color: #666;
@@ -41,7 +46,9 @@ export default () => (
       word-wrap: wrap;
     }
   `}</style>
-    <h1>@hackclub/icons</h1>
+    <h1>
+      @hackclub/<span>icons</span>
+    </h1>
     <nav>
       <a href="https://github.com/hackclub/icons">GitHub</a>
       <a href="https://npmjs.com/package/@hackclub/icons">npm</a>
