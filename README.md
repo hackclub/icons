@@ -22,3 +22,31 @@ export default () => (
   </div>
 )
 ```
+
+## Development Setup
+
+1. Clone & enter the repo.
+
+```sh
+$ git clone https://github.com/hackclub/icons.git
+$ cd icons
+```
+
+2. Install dependencies.
+
+```sh
+$ npm install
+```
+
+3. Setup docs (optional, do this if you’ve added icons).
+
+```sh
+npm run prepare
+npm run docs
+```
+
+4. Run locally.
+
+```sh
+npm run dev
+```
