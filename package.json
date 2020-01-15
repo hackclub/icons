@@ -7,22 +7,23 @@
     "icon",
     "react"
   ],
-  "author": "Lachlan Campbell",
+  "author": "Lachlan Campbell <lachlan@hackclub.com>",
   "scripts": {
-    "docs": "x0 build docs/index.js -s --out-dir docs",
-    "dev": "x0 dev docs/index.js -op 8080",
-    "prepare": "babel index.js --out-dir dist"
+    "docs": "next build && next export -o docs",
+    "dev": "next",
+    "prepare": "babel index.js --out-dir dist --presets env,react,stage-0 --no-babelrc"
   },
   "dependencies": {
-    "react": "^16.8.3"
+    "react": "^16.8.6"
   },
   "devDependencies": {
-    "@compositor/x0": "^6.0.7",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "prop-types": "^15.7.2"
+    "next": "^8.1.0",
+    "prop-types": "^15.7.2",
+    "react-dom": "^16.8.6"
   },
   "repository": {
     "type": "git",
@@ -31,8 +32,5 @@
   "bugs": {
     "url": "https://github.com/hackclub/icons/issues"
   },
-  "homepage": "https://hackclub-icons.now.sh",
-  "x0": {
-    "title": "@hackclub/icons"
-  }
+  "homepage": "https://hackclub-icons.now.sh"
 }
