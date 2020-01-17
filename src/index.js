@@ -1426,7 +1426,7 @@ export const glyphs = {
       />
     </g>
   ),
-  stickers: (
+  sticker: (
     <g>
       <path
         fillRule="evenodd"
