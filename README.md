@@ -15,10 +15,10 @@ import React from 'react'
 import Icon from '@hackclub/icons'
 
 export default () => (
-  <div style={{ color: 'hotpink' }}>
-    <Icon glyph="challenge" size={128} />
-    <Icon glyph="event-code" size={64} />
-    <Icon glyph="important" size={32} />
+  <div style={{ color: 'cyan' }}>
+    <Icon glyph="clubs" size={128} />
+    <Icon glyph="bank-circle" size={64} />
+    <Icon glyph="leaders" size={32} />
   </div>
 )
 ```
@@ -35,18 +35,17 @@ $ cd icons
 2. Install dependencies.
 
 ```sh
-$ npm install
+$ yarn
 ```
 
-3. Setup docs (optional, do this if you’ve added icons).
+3. Build library.
 
 ```sh
-npm run prepare
-npm run docs
+yarn run prepare
 ```
 
-4. Run locally.
+4. Run docs locally.
 
 ```sh
-npm run dev
+yarn run dev
 ```

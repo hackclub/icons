@@ -1,28 +1,30 @@
 {
   "name": "@hackclub/icons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Hack Club’s iconset, a superset of spectrum-icons",
   "main": "dist/index.js",
   "keywords": [
     "icon",
     "react"
   ],
-  "author": "Lachlan Campbell",
+  "author": "Lachlan Campbell <lachlan@hackclub.com>",
   "scripts": {
-    "docs": "x0 build docs/index.js -s --out-dir docs",
-    "dev": "x0 dev docs/index.js -op 8080",
-    "prepare": "babel index.js --out-dir dist"
+    "build": "next build",
+    "dev": "next",
+    "prepare": "babel src/index.js --out-dir dist --presets @babel/env,@babel/react"
   },
-  "dependencies": {
-    "react": "^16.8.3"
+  "peerDependencies": {
+    "react": "^16.12.0"
   },
   "devDependencies": {
-    "@compositor/x0": "^6.0.7",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "prop-types": "^15.7.2"
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "next": "^9.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "repository": {
     "type": "git",
@@ -31,8 +33,5 @@
   "bugs": {
     "url": "https://github.com/hackclub/icons/issues"
   },
-  "homepage": "https://hackclub-icons.now.sh",
-  "x0": {
-    "title": "@hackclub/icons"
-  }
+  "homepage": "https://hackclub-icons.now.sh"
 }
