@@ -1,8 +1,7 @@
 *
-!index.js
-!dist/index.js
-!docs/index.html
+!dist
+!src
 !package.json
-!package-lock.json
+!yarn.lock
 !README.md
 !LICENSE

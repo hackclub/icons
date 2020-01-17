@@ -1,10 +1,28 @@
 import React from 'react'
-const Icon = require('../dist')
-// import Icon from '../dist/index'
+import Head from 'next/head'
+import Icon, { glyphNames } from '../dist/index'
+
+const title = '@hackclub/icons'
+const description = 'Hack Club’s iconset, published on npm as React components.'
 
 export default () => (
   <main>
-    <style jsx>{`
+    <Head>
+      <title>{title}</title>
+      <meta property="og:title" content={title} />
+      <meta name="twitter:title" content={title} />
+      <meta name="og:url" content="https://hackclub-icons.now.sh" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={title} />
+      <meta name="description" content={description} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:description" content={description} />
+    </Head>
+    <style jsx global>{`
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, 'Helvetica Neue', sans-serif;
+      }
       main {
         font-size: 12px;
         text-align: center;
@@ -50,9 +68,9 @@ export default () => (
       <a href="https://npmjs.com/package/@hackclub/icons">npm</a>
     </nav>
     <article>
-      {['welcome'].sort().map(key => (
+      {glyphNames.sort().map(key => (
         <div key={key}>
-          {/* <Icon glyph={key} title={key} size={48} /> */}
+          <Icon glyph={key} title={key} size={48} />
           <p children={key} />
         </div>
       ))}

@@ -1,4 +1,3 @@
-*
-!package.json
-!now.json
-!pages/
+svg/
+dist/
+.next/

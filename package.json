@@ -9,21 +9,22 @@
   ],
   "author": "Lachlan Campbell <lachlan@hackclub.com>",
   "scripts": {
-    "docs": "next build && next export -o docs",
+    "build": "next build",
     "dev": "next",
-    "prepare": "babel index.js --out-dir dist --presets env,react,stage-0 --no-babelrc"
+    "prepare": "babel src/index.js --out-dir dist --presets @babel/env,@babel/react"
   },
-  "dependencies": {
-    "react": "^16.8.6"
+  "peerDependencies": {
+    "react": "^16.12.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "next": "^8.1.0",
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "next": "^9.2.0",
     "prop-types": "^15.7.2",
-    "react-dom": "^16.8.6"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "repository": {
     "type": "git",
