@@ -3,7 +3,8 @@ import Head from 'next/head'
 import Icon, { glyphNames } from '../dist/index'
 
 const title = '@hackclub/icons'
-const description = 'Hack Club’s iconset, published on npm as React components.'
+const description =
+  'Hack Club’s iconset as React components, published on npm as @hackclub/icons.'
 
 export default () => (
   <main>
