@@ -54,11 +54,20 @@ export default () => (
         justify-content: center;
       }
       p {
-        color: #666;
+        color: #8b909a;
         line-height: 1.25;
         font-family: SFMono-Regular, Menlo, monospace;
         word-break: break-word;
         word-wrap: wrap;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1e1e1e;
+          color: #fff;
+        }
+        svg {
+          fill: #e1e1e1;
+        }
       }
     `}</style>
     <h1>
