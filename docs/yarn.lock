@@ -1014,10 +1014,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@hackclub/icons@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@hackclub/icons/-/icons-0.0.3.tgz#4b70c294d174ef7b58732c5888ab5e2b51dc14cb"
-  integrity sha512-V9UJo0MNl5GdTBNXQvvKa8YGhNMK4dd0tsnewGNQQLBMpfSYzN0wfxhkKyY5GT5rFqmxAnt0lElW1ACxHRCByA==
+"@hackclub/icons@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@hackclub/icons/-/icons-0.0.4.tgz#f32b51226a80e015238b9addd69cf7c89c93bdf7"
+  integrity sha512-4oybVS0S8DPP/17X8NKKuR5cdukFxV02mYiznZzbCSHtCXd70bdVb61ithuHV0q4G3s49W1Fd/JEqbd0M10qfw==
 
 "@next/react-dev-overlay@9.5.3":
   version "9.5.3"
@@ -3271,7 +3271,7 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next@^9.5.2:
+next@^9.5.3:
   version "9.5.3"
   resolved "https://registry.yarnpkg.com/next/-/next-9.5.3.tgz#7af5270631f98d330a7f75a6e8e1ac202aa155e2"
   integrity sha512-DGrpTNGV2RNMwLaSzpgbkbaUuVk30X71/roXHS10isSXo2Gm+qWcjonDyOxf1KmOvHZRHA/Fa+LaAR7ysdYS3A==
