@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Icon, { glyphNames } from '../dist/index'
+import Icon, { glyphNames } from '@hackclub/icons'
 
 const title = '@hackclub/icons'
 const description =
@@ -12,7 +12,7 @@ export default () => (
       <title>{title}</title>
       <meta property="og:title" content={title} />
       <meta name="twitter:title" content={title} />
-      <meta name="og:url" content="https://hackclub-icons.now.sh" />
+      <meta name="og:url" content="https://icons.hackclub.com" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={title} />
       <meta name="description" content={description} />

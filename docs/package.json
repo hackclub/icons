@@ -1,0 +1,17 @@
+{
+  "name": "@hackclub/icons-docs",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next"
+  },
+  "author": "Lachlan Campbell <lachlan@hackclub.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@hackclub/icons": "^0.0.3",
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
