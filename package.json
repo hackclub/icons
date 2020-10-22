@@ -1,6 +1,6 @@
 {
   "name": "@hackclub/icons",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Hack Club’s iconset, a superset of spectrum-icons",
   "main": "dist/index.js",
   "keywords": [
