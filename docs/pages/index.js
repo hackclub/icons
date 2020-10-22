@@ -6,7 +6,7 @@ const title = '@hackclub/icons'
 const description =
   'Hack Club’s iconset as React components, published on npm as @hackclub/icons.'
 
-export default () => (
+const Docs = () => (
   <main>
     <Head>
       <title>{title}</title>
@@ -87,3 +87,5 @@ export default () => (
     </article>
   </main>
 )
+
+export default Docs
