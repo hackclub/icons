@@ -1502,12 +1502,11 @@ type Props<T> = {
 };
 
 function Icon<T extends React.ElementType = "svg">({
-  is,
+  is: Component,
   size,
   glyph,
   ...props
 }: Props<T> & React.ComponentPropsWithoutRef<T>) {
-  const Component = is;
   return (
     <Component
       fillRule="evenodd"
