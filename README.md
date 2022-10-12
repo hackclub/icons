@@ -25,7 +25,7 @@ export default () => (
 )
 ```
 
-### With API
+### With the API
 
 `https://icons.hackclub.com/api/icons/:color/:glyph`
  - `:glyph` - A glyph from [icons.hackclub.com](https://icons.hackclub.com).
