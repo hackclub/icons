@@ -29,13 +29,16 @@ export default () => (
 
 `https://icons.hackclub.com/api/icons/:color/:glyph`
  - `:glyph` - A glyph from [icons.hackclub.com](https://icons.hackclub.com).
- - `:color` - Any valid HTML color. Replace `#` with `0x` when using a hexadecimal color.
+ - `:color` - Any valid HTML color or [Hack Club Theme](https://theme.hackclub.com) color prefixed with `hackclub-`. Replace `#` with `0x` when using a hexadecimal color.
+
+All responses are SVGs with the MIME type `image/svg+xml`. You can optionally include the .svg file extension.
 
 Examples:
 
 ```html
 <img src="https://icons.hackclub.com/api/icons/red/clubs">
-<img src="https://icons.hackclub.com/api/icons/0x33d6a6/battery-bolt">
+<img src="https://icons.hackclub.com/api/icons/hackclub-green/battery-bolt">
+<img src="https://icons.hackclub.com/api/icons/0xc78ad4/sam">
 ```
 
 ## Development Setup
