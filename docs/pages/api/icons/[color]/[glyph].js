@@ -1,3 +1,5 @@
+import theme from '@hackclub/theme'
+
 const builder = (glyph, color, size) => `
 <svg
   fill-rule="evenodd"
@@ -14,6 +16,8 @@ const builder = (glyph, color, size) => `
 >
   ${glyphs[glyph]}
 </svg>`;
+
+const hackClubColors = theme.colors;
 
 const glyphs = {
     analytics: `
@@ -1519,9 +1523,13 @@ export default async function handler(request, response) {
     let { color, glyph } = request.query;
     if (color.startsWith('color:')) color = color.substring(6);
     if (glyph.startsWith('glyph:')) glyph = glyph.substring(6);
-    response.setHeader('Content-Type', 'image/svg+xml');
-    if (color.startsWith('0x') && color.length === 8) color = '#' + color.substring(2);
     if (glyph.endsWith('.svg')) glyph = glyph.substring(0, glyph.length - 4);
+
+    if (color.startsWith('hackclub-') && hackClubColors[color.substring(9)]) color = hackClubColors[color.substring(9)];
+    else if (color.startsWith('0x') && color.length === 8) color = '#' + color.substring(2);
+
+    response.setHeader('Content-Type', 'image/svg+xml');
+    response.setHeader('Cache-Control', 's-maxage=86400');
     response.end(IconLibrary.icon(glyph, 256, color));
 }
 
