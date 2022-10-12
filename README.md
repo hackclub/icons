@@ -38,7 +38,7 @@ Examples:
 ```html
 <img src="https://icons.hackclub.com/api/icons/red/clubs">
 <img src="https://icons.hackclub.com/api/icons/hackclub-green/battery-bolt">
-<img src="https://icons.hackclub.com/api/icons/0xc78ad4/sam">
+<img src="https://icons.hackclub.com/api/icons/0xc78ad4/sam.svg">
 ```
 
 ## Development Setup
