@@ -6,6 +6,8 @@ Hack Club’s icons are a superset of [Spectrum](https://spectrum.chat)’s incr
 
 ## Usage
 
+### With React
+
 ```sh
 npm i @hackclub/icons
 ```
@@ -21,6 +23,19 @@ export default () => (
     <Icon glyph="leaders" size={32} />
   </div>
 )
+```
+
+### With API
+
+`https://icons.hackclub.com/api/icons/:color/:glyph`
+ - `:glyph` - A glyph from [icons.hackclub.com](https://icons.hackclub.com).
+ - `:color` - Any valid HTML color. Replace `#` with `0x` when using a hexadecimal color.
+
+Examples:
+
+```html
+<img src="https://icons.hackclub.com/api/icons/red/clubs">
+<img src="https://icons.hackclub.com/api/icons/0x33d6a6/battery-bolt">
 ```
 
 ## Development Setup
