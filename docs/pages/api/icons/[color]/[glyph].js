@@ -1529,6 +1529,7 @@ export default async function handler(request, response) {
     else if (color.startsWith('0x') && color.length === 8) color = '#' + color.substring(2);
 
     response.setHeader('Content-Type', 'image/svg+xml');
+    response.setHeader('Cache-Control', 's-maxage=86400');
     response.end(IconLibrary.icon(glyph, 256, color));
 }
 
