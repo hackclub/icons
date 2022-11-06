@@ -1,10 +1,12 @@
-import React from 'react'
-import Head from 'next/head'
-import Icon, { glyphNames } from '@hackclub/icons'
+import React from "react";
+import Head from "next/head";
+import Icon, { glyphNames } from "@hackclub/icons";
 
-const title = '@hackclub/icons'
+const title = "@hackclub/icons";
 const description =
-  'Hack Club’s iconset as React components, published on npm as @hackclub/icons.'
+  "Hack Club’s iconset as React components, published on npm as @hackclub/icons.";
+
+const hidden = ["sus", "android"];
 
 const Docs = () => (
   <main>
@@ -21,8 +23,8 @@ const Docs = () => (
     </Head>
     <style jsx global>{`
       body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-          Roboto, 'Helvetica Neue', sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", sans-serif;
       }
       main {
         font-size: 12px;
@@ -78,14 +80,17 @@ const Docs = () => (
       <a href="https://npmjs.com/package/@hackclub/icons">npm</a>
     </nav>
     <article>
-      {glyphNames.sort().map(key => (
-        <div key={key}>
-          <Icon glyph={key} title={key} size={48} />
-          <p children={key} />
-        </div>
-      ))}
+      {glyphNames.sort().map(
+        (key) =>
+          !hidden.includes(key) && (
+            <div key={key}>
+              <Icon glyph={key} title={key} size={48} />
+              <p children={key} />
+            </div>
+          )
+      )}
     </article>
   </main>
-)
+);
 
-export default Docs
+export default Docs;
