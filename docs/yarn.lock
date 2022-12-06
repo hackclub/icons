@@ -1014,10 +1014,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@hackclub/icons@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@hackclub/icons/-/icons-0.0.10.tgz#af15429a29febed29fc1ba2cc69b46558ffe72bf"
-  integrity sha512-16RG1voGcXTSAMvjH1OkK1zPRcRsQ0jL7b2JLUBGgHkMdMJHdfK+vBBHYCOxbdho15xPsewA4fQYGyMxMLaZgw==
+"@hackclub/icons@latest":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@hackclub/icons/-/icons-0.0.12.tgz#a82dd20fdbc263c956aaee3ec8689078965d22fa"
+  integrity sha512-YXPpalHN0lEjgaUD++u43NucSfgXlaQRbNKH+CJusS9erCF1jyu0pUH0peXqmlWZybbIg1PnuYJyOvKDvACA2g==
 
 "@hackclub/theme@^0.3.3":
   version "0.3.3"
@@ -2159,9 +2159,9 @@ debug@^2.2.0, debug@^2.3.3:
     ms "2.0.0"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 decompress-response@^4.2.0:
   version "4.2.1"
