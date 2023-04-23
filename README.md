@@ -68,7 +68,7 @@ yarn run prepare
 yarn run dev
 ```
 
-### Adding an icon
+## Adding an icon
 
 If you’d like to add an icon, the Figma file is [Hack Club Icons](https://www.figma.com/file/H2wiriGOtV3txSx6fwVTwsPz/Hack-Club-icons?node-id=0%3A1&t=m5yDilUsUNQxrUUu-1). Try to design the icon only out of components of other icons, to keep consistency high, with those small square canvas sizes. When you’re done, clone your new icon, flatten all the layers into one shape for the simplest/smallest code/rendering, then export as an SVG with no background. Open the file, copy the `<path>`, then in the Icon source file, add a new one (alphabetically), using a wrapping `<g>` if you have several `<path>`s. Make sure to remove the fill attribute from all paths, & ensure you’re formatting props correctly as JSX (replacing hyphens with camelCase).
 
