@@ -41,6 +41,12 @@ Examples:
 <img src="https://icons.hackclub.com/api/icons/0xc78ad4/sam.svg">
 ```
 
+### In Figma
+
+Copy and paste the Hack Club Icon component from the Figma file: [figma.com/file/u8evOObGA4HCzUKlrVra1q/Hack-Club-Icon-Component](https://www.figma.com/file/u8evOObGA4HCzUKlrVra1q/Hack-Club-Icon-Component)
+
+Choose the icon you'd like by modifying the `Glyph`.
+
 ## Development Setup
 
 1. Clone & enter the repo.
