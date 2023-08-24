@@ -1528,6 +1528,7 @@ export default async function handler(request, response) {
     if (color.startsWith('hackclub-') && hackClubColors[color.substring(9)]) color = hackClubColors[color.substring(9)];
     else if (color.startsWith('0x') && color.length === 8) color = '#' + color.substring(2);
 
+    response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Content-Type', 'image/svg+xml');
     response.setHeader('Cache-Control', 's-maxage=86400');
     response.end(IconLibrary.icon(glyph, 256, color));
