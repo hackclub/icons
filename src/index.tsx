@@ -1573,10 +1573,4 @@ Icon.propTypes = {
   size: PropTypes.number,
 };
 
-Icon.defaultProps = {
-  is: "svg",
-  glyph: "like",
-  size: 32,
-};
-
 export default Icon;
