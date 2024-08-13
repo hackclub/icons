@@ -1533,15 +1533,15 @@ export const glyphs = {
 export const glyphNames = Object.keys(glyphs);
 
 type Props<T> = {
-  is?: Function | T | string;
+  is?: React.FunctionComponent | T | string;
   glyph?: keyof typeof glyphs;
   size?: number;
 };
 
 function Icon<T extends React.ElementType = "svg">({
-  is: Component,
-  size,
-  glyph,
+  is: Component = "svg",
+  size = 32,
+  glyph = "like",
   ...props
 }: Props<T> & React.ComponentPropsWithoutRef<T>) {
   return (
