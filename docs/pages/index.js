@@ -6,7 +6,7 @@ const title = "@hackclub/icons";
 const description =
   "Hack Club’s iconset as React components, published on npm as @hackclub/icons.";
 
-const hidden = ["sus", "android"];
+const hidden = ["sus"];
 
 const Docs = () => (
   <main>
