@@ -78,6 +78,7 @@ const Docs = () => (
     <nav>
       <a href="https://github.com/hackclub/icons">GitHub</a>
       <a href="https://npmjs.com/package/@hackclub/icons">npm</a>
+      <a href="https://www.figma.com/file/u8evOObGA4HCzUKlrVra1q/Hack-Club-Icon-Component">Figma</a>
     </nav>
     <article>
       {glyphNames.sort().map(
