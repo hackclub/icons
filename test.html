@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack Club Icons Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .icon-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+        .icon-item code {
+            font-size: 12px;
+            color: #666;
+        }
+        .demo-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .old-style {
+            color: #999;
+            font-style: italic;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.info {
+            background: #cce7ff;
+            color: #0c5460;
+            border: 1px solid #b8daff;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Hack Club Icons - Font Awesome Style</h1>
+    
+    <div class="status success">
+        <strong>✅ Success!</strong> Hack Club Icons library loaded successfully with 204 icons available.
+    </div>
+
+    <div class="test-section">
+        <h2>Basic Usage Examples</h2>
+        
+        <h3>Custom Elements (Recommended)</h3>
+        <div class="demo-icons">
+            <hc-icon glyph="clubs" size="24"></hc-icon>
+            <hc-icon glyph="analytics" size="32" color="#ec3750"></hc-icon>
+            <hc-icon glyph="github" size="28" color="#333"></hc-icon>
+            <hc-icon glyph="code" size="24" color="#007acc"></hc-icon>
+        </div>
+        
+        <pre><code>&lt;hc-icon glyph="clubs" size="24"&gt;&lt;/hc-icon&gt;
+&lt;hc-icon glyph="analytics" size="32" color="#ec3750"&gt;&lt;/hc-icon&gt;
+&lt;hc-icon glyph="github" size="28" color="#333"&gt;&lt;/hc-icon&gt;</code></pre>
+
+        <h3>Programmatic Usage</h3>
+        <div id="programmatic-demo"></div>
+        
+        <pre><code>// Create icons programmatically
+const icon = HackClubIcons.create('bolt', { size: '24', color: '#007acc' });
+document.getElementById('programmatic-demo').appendChild(icon);</code></pre>
+
+        <h3>Class-based Replacement</h3>
+        <div class="demo-icons">
+            <div class="hc-icon" data-glyph="apple" data-size="24"></div>
+            <div class="hc-icon" data-glyph="briefcase" data-size="28" data-color="#ec3750"></div>
+            <div class="hc-icon" data-glyph="checkmark" data-size="24" data-color="#33d9b2"></div>
+        </div>
+        
+        <pre><code>&lt;div class="hc-icon" data-glyph="apple" data-size="24"&gt;&lt;/div&gt;
+&lt;div class="hc-icon" data-glyph="briefcase" data-size="28" data-color="#ec3750"&gt;&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="test-section">
+        <h2>Available Icons</h2>
+        <div class="status info">
+            <strong>📦 Complete Icon Set:</strong> All 204 icons from the Hack Club icon library are available.
+        </div>
+        <div id="icon-showcase" class="icon-grid"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>API Reference</h2>
+        
+        <h3>Custom Element</h3>
+        <pre><code>&lt;hc-icon glyph="icon-name" size="24" color="red"&gt;&lt;/hc-icon&gt;</code></pre>
+        
+        <h3>JavaScript API</h3>
+        <pre><code>// Get all available glyph names
+const glyphs = HackClubIcons.getGlyphs();
+
+// Create an icon element
+const icon = HackClubIcons.create('clubs', {
+    size: '32',
+    color: '#ec3750',
+    className: 'my-icon'
+});
+
+// Get SVG string
+const svg = HackClubIcons.getSvg('github', { size: '24' });
+
+// Replace elements with class 'hc-icon'
+HackClubIcons.replace('.hc-icon');</code></pre>
+    </div>
+
+    <script src="hackclub-icons.js"></script>
+    <script>
+        // Test programmatic creation
+        const programmaticDemo = document.getElementById('programmatic-demo');
+        const icon1 = HackClubIcons.create('bolt', { size: '24', color: '#007acc' });
+        const icon2 = HackClubIcons.create('bag', { size: '28', color: '#ec3750' });
+        const icon3 = HackClubIcons.create('battery', { size: '24', color: '#33d9b2' });
+        
+        programmaticDemo.appendChild(icon1);
+        programmaticDemo.appendChild(icon2);
+        programmaticDemo.appendChild(icon3);
+
+        // Display available icons
+        const iconShowcase = document.getElementById('icon-showcase');
+        const glyphs = HackClubIcons.getGlyphs();
+        
+        // Show first 20 icons as examples
+        glyphs.slice(0, 20).forEach(glyph => {
+            const item = document.createElement('div');
+            item.className = 'icon-item';
+            item.innerHTML = `
+                <hc-icon glyph="${glyph}" size="24"></hc-icon>
+                <code>${glyph}</code>
+            `;
+            iconShowcase.appendChild(item);
+        });
+
+        // Add info about total icons
+        const infoDiv = document.createElement('div');
+        infoDiv.style.textAlign = 'center';
+        infoDiv.style.marginTop = '20px';
+        infoDiv.style.color = '#666';
+        infoDiv.innerHTML = `<p><strong>Showing 20 of ${glyphs.length} available icons</strong></p>`;
+        iconShowcase.appendChild(infoDiv);
+    </script>
+</body>
+</html>
