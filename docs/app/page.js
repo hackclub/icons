@@ -1,4 +1,4 @@
-import Icon, { glyphNames } from "@hackclub/icons";
+import Icon, { glyphNames } from "../../src";
 
 const hidden = new Set(["sus", "android"]);
 const visibleGlyphNames = [...glyphNames]

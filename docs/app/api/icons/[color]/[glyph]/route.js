@@ -1,4 +1,4 @@
-import { glyphs } from "@hackclub/icons";
+import { glyphs } from "../../../../../../src";
 import theme from "@hackclub/theme";
 
 const hackClubColors = theme.colors;
