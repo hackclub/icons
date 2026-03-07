@@ -1,4 +1,4 @@
-# `@hackclub/icons`
+# `@hackclub/icons` [![npm](https://img.shields.io/npm/v/@hackclub/icons)](https://www.npmjs.com/package/@hackclub/icons)
 
 Hack Club’s icons are a partial set of [Supercons](https://supercons.vercel.app)' incredible collection. Designed for use with our [Design System](https://github.com/hackclub/design-system).
 
