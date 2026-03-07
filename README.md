@@ -1,6 +1,6 @@
 # `@hackclub/icons`
 
-Hack Club’s icons are a superset of [Spectrum](https://github.com/withspectrum/spectrum)’s incredible collection (also published as [`supercons`](https://supercons.vercel.app/)). Designed for use with our [Design System](https://github.com/hackclub/design-system).
+Hack Club’s icons are a partial set of [Supercons](https://supercons.vercel.app)' incredible collection. Designed for use with our [Design System](https://github.com/hackclub/design-system).
 
 [See them all](https://hackclub-icons.now.sh)
 
