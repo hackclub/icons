@@ -1075,10 +1075,8 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@hackclub/icons@latest":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@hackclub/icons/-/icons-0.0.12.tgz#a82dd20fdbc263c956aaee3ec8689078965d22fa"
-  integrity sha512-YXPpalHN0lEjgaUD++u43NucSfgXlaQRbNKH+CJusS9erCF1jyu0pUH0peXqmlWZybbIg1PnuYJyOvKDvACA2g==
+"@hackclub/icons@file:..":
+  version "0.0.14"
 
 "@hackclub/theme@^0.3.3":
   version "0.3.3"

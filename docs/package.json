@@ -9,7 +9,7 @@
   "author": "Lachlan Campbell <lachlan@hackclub.com>",
   "license": "MIT",
   "dependencies": {
-    "@hackclub/icons": "latest",
+    "@hackclub/icons": "file:..",
     "@hackclub/theme": "^0.3.3",
     "next": "^10.0.0",
     "react": "^17.0.1",

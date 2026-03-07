@@ -15,7 +15,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
-    "prepare": "tsc && babel src/index.tsx --extensions .tsx --out-dir dist --presets @babel/env,@babel/react,@babel/typescript"
+    "prepare": "tsc && babel src --extensions .tsx --out-dir dist --presets @babel/env,@babel/react,@babel/typescript"
   },
   "peerDependencies": {
     "react": "^18.2.0"
