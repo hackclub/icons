@@ -18,7 +18,8 @@
     "docs:build": "yarn --cwd docs build",
     "docs:dev": "yarn --cwd docs dev",
     "docs:start": "yarn --cwd docs start",
-    "prepare": "tsc && babel src --extensions .tsx --out-dir dist --presets @babel/env,@babel/react,@babel/typescript"
+    "prepare": "tsc && babel src --extensions .tsx --out-dir dist --presets @babel/env,@babel/react,@babel/typescript",
+    "test": "node scripts/test-icons.js"
   },
   "peerDependencies": {
     "react": "^18.2.0 || ^19.0.0"
