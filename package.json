@@ -3,7 +3,15 @@
   "version": "0.1.0",
   "description": "Hack Club’s iconset, a superset of spectrum-icons",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/index.js"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -18,7 +26,7 @@
     "docs:build": "yarn --cwd docs build",
     "docs:dev": "yarn --cwd docs dev",
     "docs:start": "yarn --cwd docs start",
-    "prepare": "tsc && babel src --extensions .tsx --out-dir dist --presets @babel/env,@babel/react,@babel/typescript",
+    "prepare": "tsc && babel src --extensions .tsx --out-dir dist --presets @babel/env,@babel/react,@babel/typescript && babel src --extensions .tsx --out-dir dist/esm --presets @babel/react,@babel/typescript && echo '{\"type\":\"module\"}' > dist/esm/package.json",
     "test": "node scripts/test-icons.js"
   },
   "peerDependencies": {
