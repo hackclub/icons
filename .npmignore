@@ -3,6 +3,6 @@
 !src
 !docs
 !package.json
-!yarn.lock
+!bun.lock
 !README.md
 !LICENSE

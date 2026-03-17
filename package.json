@@ -21,13 +21,13 @@
   ],
   "author": "Lachlan Campbell <lachlan@hackclub.com>",
   "scripts": {
-    "build": "yarn prepare && yarn docs:build",
-    "dev": "yarn docs:dev",
-    "docs:build": "yarn --cwd docs build",
-    "docs:dev": "yarn --cwd docs dev",
-    "docs:start": "yarn --cwd docs start",
+    "build": "bun run prepare && bun run docs:build",
+    "dev": "bun run docs:dev",
+    "docs:build": "bun --cwd docs run build",
+    "docs:dev": "bun --cwd docs run dev",
+    "docs:start": "bun --cwd docs run start",
     "prepare": "tsc && babel src --extensions .tsx --out-dir dist --presets @babel/env,@babel/react,@babel/typescript && babel src --extensions .tsx --out-dir dist/esm --presets @babel/react,@babel/typescript && echo '{\"type\":\"module\"}' > dist/esm/package.json",
-    "test": "node scripts/test-icons.js"
+    "test": "bun test scripts/"
   },
   "peerDependencies": {
     "react": "^18.2.0 || ^19.0.0"

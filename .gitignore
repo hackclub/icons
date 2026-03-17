@@ -1,5 +1,6 @@
 dist/
-node_modules/
+node_modules
+bun.lockb
 .DS_Store
 .next/
 .vercel/
