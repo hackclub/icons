@@ -27,7 +27,7 @@
     "docs:dev": "bun --cwd docs run dev",
     "docs:start": "bun --cwd docs run start",
     "prepare": "tsc && babel src --extensions .tsx --out-dir dist --presets @babel/env,@babel/react,@babel/typescript && babel src --extensions .tsx --out-dir dist/esm --presets @babel/react,@babel/typescript && echo '{\"type\":\"module\"}' > dist/esm/package.json",
-    "test": "bun scripts/test-icons.js"
+    "test": "bun test scripts/"
   },
   "peerDependencies": {
     "react": "^18.2.0 || ^19.0.0"
