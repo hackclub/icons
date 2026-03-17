@@ -59,19 +59,19 @@ $ cd icons
 2. Install dependencies.
 
 ```sh
-$ yarn
+$ bun install
 ```
 
 3. Build library.
 
 ```sh
-yarn run prepare
+bun run prepare
 ```
 
 4. Run docs locally.
 
 ```sh
-yarn run dev
+bun run dev
 ```
 
 ## Updating icon sets
@@ -84,7 +84,7 @@ We split icons into two files:
 To pull new upstream icons, update `src/standardGlyphs.tsx` and then run:
 
 ```sh
-yarn run prepare
+bun run prepare
 ```
 
 Backward-compatibility aliases are handled in `src/index.tsx` so existing glyph names continue to resolve.
