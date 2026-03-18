@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { standardGlyphs } from "./standardGlyphs";
 import { hackclubGlyphs } from "./hackclubGlyphs";
 
@@ -61,15 +60,5 @@ function Icon<T extends React.ElementType = "svg">({
     glyphs[glyph as keyof typeof glyphs]
   );
 }
-
-Icon.propTypes = {
-  is: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.func,
-    PropTypes.elementType,
-  ]),
-  glyph: PropTypes.oneOf(glyphNames),
-  size: PropTypes.number,
-};
 
 export default Icon;
