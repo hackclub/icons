@@ -26,7 +26,10 @@
     "docs:build": "bun --cwd docs run build",
     "docs:dev": "bun --cwd docs run dev",
     "docs:start": "bun --cwd docs run start",
-    "prepare": "tsc && babel src --extensions .tsx --out-dir dist --presets @babel/env,@babel/react,@babel/typescript && babel src --extensions .tsx --out-dir dist/esm --presets @babel/react,@babel/typescript && echo '{\"type\":\"module\"}' > dist/esm/package.json",
+    "build:types": "tsc",
+    "build:cjs": "bun build src/index.tsx --outdir dist --target node --format cjs --external react --external prop-types",
+    "build:esm": "bun build src/index.tsx --outdir dist/esm --target browser --format esm --external react --external prop-types && echo '{\"type\":\"module\"}' > dist/esm/package.json",
+    "prepare": "rm -rf dist && bun run build:types && bun run build:cjs && bun run build:esm",
     "test": "bun test scripts/"
   },
   "peerDependencies": {
@@ -37,11 +40,6 @@
   },
   "devDependencies": {
     "@hackclub/theme": "^1.0.0",
-    "@babel/cli": "^7.28.6",
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.0",
-    "@babel/preset-react": "^7.28.5",
-    "@babel/preset-typescript": "^7.28.5",
     "@types/prop-types": "^15.7.15",
     "@types/react": "^19.2.14",
     "next": "^16.1.6",
