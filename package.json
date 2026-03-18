@@ -7,9 +7,14 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/index.js"
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
     }
   },
   "files": [
@@ -27,9 +32,9 @@
     "docs:dev": "bun --cwd docs run dev",
     "docs:start": "bun --cwd docs run start",
     "build:types": "tsc",
-    "build:cjs": "bun build src/index.tsx --outdir dist --target node --format cjs --external react --production",
-    "build:esm": "bun build src/index.tsx --outdir dist/esm --target browser --format esm --external react --production && echo '{\"type\":\"module\"}' > dist/esm/package.json",
-    "prepare": "rm -rf dist && bun run build:types && bun run build:cjs && bun run build:esm",
+    "build:esm": "bun build src/index.tsx --outdir dist/esm --format esm --external react --production",
+    "build:cjs": "node scripts/build-cjs.js",
+    "prepare": "rm -rf dist && bun run build:esm && echo '{\"type\":\"module\"}' > dist/esm/package.json && bun run build:types && bun run build:cjs",
     "test": "bun test scripts/"
   },
   "peerDependencies": {
