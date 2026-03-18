@@ -1,8 +1,5 @@
 *
 !dist
-!src
-!docs
 !package.json
-!bun.lock
 !README.md
 !LICENSE
