@@ -8,12 +8,12 @@
       "lib": [
         "ES2017"
       ],
-      "module": "commonjs",
-      "moduleResolution": "node",
+      "module": "ESNext",
+      "moduleResolution": "bundler",
       "emitDeclarationOnly": true,
       "declaration": true,
       "declarationMap": true,
-      "outDir": "./dist",
+      "outDir": "./dist/esm",
       "skipLibCheck": true,
       "strict": true,
       "target": "ES2017"
