@@ -1,4 +1,5 @@
-import Icon, { glyphNames } from "../../src";
+import { glyphNames } from "../../src";
+import IconGallery from "./IconGallery";
 
 const hidden = new Set(["sus", "android"]);
 const visibleGlyphNames = [...glyphNames]
@@ -18,14 +19,7 @@ export default function Page() {
           Figma
         </a>
       </nav>
-      <article>
-        {visibleGlyphNames.map((glyph) => (
-          <div key={glyph}>
-            <Icon glyph={glyph} title={glyph} size={48} />
-            <p>{glyph}</p>
-          </div>
-        ))}
-      </article>
+      <IconGallery glyphs={visibleGlyphNames} />
     </main>
   );
 }

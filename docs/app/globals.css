@@ -42,23 +42,115 @@ nav a {
 article {
   margin-top: 48px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
+  gap: 12px;
   justify-content: center;
 }
 
-p {
+.icon-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: transparent;
+  color: inherit;
+  width: 100%;
+  min-height: 116px;
+  padding: 6px 6px 4px;
+  font: inherit;
+  text-align: center;
+  transition:
+    transform 120ms ease,
+    border-color 120ms ease,
+    background-color 120ms ease;
+}
+
+.icon-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(140, 144, 154, 0.25);
+  background: rgba(140, 144, 154, 0.08);
+}
+
+.icon-card:focus-within {
+  outline: 2px solid #ec3750;
+  outline-offset: 2px;
+}
+
+.icon-card-toast {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%, 6px);
+  opacity: 0;
+  pointer-events: none;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #ec3750;
+  color: #fff;
+  font-family: SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.icon-card.is-copied .icon-card-toast {
+  opacity: 1;
+  transform: translate(-50%, -6px);
+}
+
+.icon-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 46px;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.icon-card-name {
+  appearance: none;
+  border: 0;
+  background: transparent;
   color: #8b909a;
+  cursor: pointer;
+  width: 100%;
+  min-height: 2.35em;
+  margin: auto 0 0;
+  padding: 6px 0 0;
   line-height: 1.25;
   font-family: SFMono-Regular, Menlo, monospace;
+  font-size: inherit;
+  text-align: center;
   word-break: break-word;
   overflow-wrap: anywhere;
+}
+
+.icon-card-icon:focus-visible,
+.icon-card-name:focus-visible {
+  outline: none;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1e1e1e;
     color: #fff;
+  }
+
+  .icon-card:hover {
+    border-color: rgba(225, 225, 225, 0.18);
+    background: rgba(225, 225, 225, 0.08);
   }
 
   svg {
