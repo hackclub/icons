@@ -1,0 +1,10 @@
+# Keep the build context small and avoid copying host-built artifacts.
+**/node_modules
+**/.next
+dist
+svg
+.git
+.github
+.vercel
+.DS_Store
+*.log
