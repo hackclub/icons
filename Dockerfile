@@ -18,6 +18,6 @@ USER bun
 COPY --chown=bun:bun --from=build /app/docs/.next/standalone ./
 COPY --chown=bun:bun --from=build /app/docs/.next/static ./docs/.next/static
 
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["bun", "docs/server.js"]
