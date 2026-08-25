@@ -1,16 +1,10 @@
-FROM oven/bun:1 AS deps
-WORKDIR /app/docs
-COPY docs/package.json docs/bun.lock ./
-RUN bun install --frozen-lockfile
-
 FROM oven/bun:1 AS build
 WORKDIR /app
 COPY . .
-COPY --from=deps /app/docs/node_modules ./docs/node_modules
-ENV NEXT_TELEMETRY_DISABLED=1
 WORKDIR /app/docs
+RUN bun install --frozen-lockfile
+ENV NEXT_TELEMETRY_DISABLED=1
 RUN bun run build
-WORKDIR /app
 
 FROM oven/bun:1-slim AS runner
 WORKDIR /app
