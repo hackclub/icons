@@ -10,10 +10,10 @@
   "author": "Lachlan Campbell <lachlan@hackclub.com>",
   "license": "MIT",
   "dependencies": {
-    "@hackclub/theme": "^1.0.0",
-    "next": "^16.1.6",
+    "@hackclub/theme": "^1.1.0",
+    "next": "^16.3.2",
     "prop-types": "^15.8.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   }
 }
