@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { glyphNames } from "../../src";
 import IconGallery from "./IconGallery";
 
@@ -7,6 +9,8 @@ const visibleGlyphNames = [...glyphNames]
   .sort();
 
 export default function Page() {
+  const [currentGlyphNames, setCurrentGlyphNames] = useState(visibleGlyphNames);
+
   return (
     <main>
       <h1>
@@ -19,7 +23,8 @@ export default function Page() {
           Figma
         </a>
       </nav>
-      <IconGallery glyphs={visibleGlyphNames} />
+      <input type="text" onChange={e => {setCurrentGlyphNames(visibleGlyphNames.filter(glyph => glyph.toLowerCase().includes(e.target.value)))}} placeholder="Search Icon..." />
+      <IconGallery glyphs={currentGlyphNames} />
     </main>
   );
 }
